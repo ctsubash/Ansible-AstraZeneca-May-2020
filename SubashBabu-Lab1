@@ -1,0 +1,36 @@
+Lab and Assignment 1 - 
+https://www.devopsschool.com/blog/ansible-adhoc-commands-lab-excercise-part-1/
+
+Program 1 – Write a Ansible Adhoc Commands to create a group called “deploy
+ansible localhost -m group -a"name=deploy state=present"
+
+Program 2 – Write a Ansible Adhoc Commands to create a user called “deploy-user” which is part of group called “deploy” and with /bin/bash shell.
+ansible localhost -m user -a"name=deploy-user group=deploy shell=/bin/bash state=present"
+
+Program 3 – Write a Ansible Adhoc commands install package named “httpd” in RHEL/centos.
+ansible localhost -m yum -a"state=started  name=httpd"
+
+Program 4 – Write a Ansible Adhoc commands to start and enable the service named “httpd”
+ansible localhost -m service -a"name=httpd state=started enabled=yes"
+
+Program 5 – Write a Ansible commands to create a file called “index.html” in /var/www/html with some dummy html contents.
+ansible localhost -m copy -a"dest=/var/www/html src=index.html"
+
+
+Program 6 – Write a Ansible commands to copy a file called “second.html” in /var/www/html/second.html with some dummy html contents.
+ansible localhost -m copy -a"dest=/var/www/html/second.html src=index.html"
+
+Program 7 – Write a Ansible commands to install a package called “git”, “wget”.
+ansible localhost -m yum -a"name=wget state=installed"
+ansible localhost -m yum -a"name=git state=installed"
+
+Program 8 – Write a Ansible Adhoc commands to clone git repo. https://github.com/scmgalaxy/ansible-role-template.
+ansible localhost -m git -a"clone=yes recursive=yes repo=https://github.com/scmgalaxy/ansible-role-template dest=/var/www/html/ansible-role-template"
+
+Program 9 – Write a Ansible commands to reboot a self machine.
+ansible localhost -m reboot -a"msg=reboot initiated by ansible" --- not worked
+
+Program 10 – Write a Ansible commands to touch a file called “devopsschool.txt” in /opt/ and delete after using ansible adhoc command.
+
+ansible localhost -m file -a"path=/opt/devopsschoo.txt state=touch"
+ansible localhost -m file -a"path=/opt/devopsschoo.txt state=absent"
