@@ -1,0 +1,395 @@
+Rajesh Kumar
+==============================
+www.RajeshKumar.xyz
+===============================
+
+
+Lab + Demo - AWS
+Start : 9:30 AM
+End : 5:30 
+==========================
+1 PM - 1:45 PM - Lunch
+11:00 AM - Tea break
+3:30 PM - Tea break
+=========================
+===========================================================
+Where can you use Ansible?
+==========================================================
+Prod - prodx
+Mgmr - MgrX
+
+Software Dev Model -> Waterfall -> Agile -> DevOps
+Software Arch -> Monolithic -> SOA -> Microservices 
+
+What is DevOps?
+=======================
+https://www.devopsschool.com/videos/387/complete-cicd-devops-implementation-from-scratch-using-jenkins-by-devopsschool/
+
+Objective of DevOps
+	- Immediate release
+	- Cost reduction of the software
+	- Quality Release
+
+==========================================================
+Architect -> Dev -> BR -> QA -> Ops
+
+Plan - Architect
+	- Jira - Conflunce Wiki
+Coding - 17 Module -17 Dev
+	Git with github
+Code Review - 
+	PEER
+	Static- 
+Build
+	Maven - Ant - MSBUILD, Gradle
+Unit test - 
+		Junit - Nunit
+Packaging
+		System - exe - dmg - rpm - deb
+		App - zip,war,jar,ear,bin,so		
+Archiving
+		Nexus - Artifactory - Nuget - Archiva
+
+Deploy to Env.
+==========================
+	Dev
+		Web Server(S) 
+		App Server(S) 
+		DB server(S) 
+	QA
+		Web Server(S) - 30
+		App Server(S) - 50
+		DB server(S) - 20
+	Staging
+		Web Server(S)
+		App Server(S)
+		DB server(S)
+	Int
+		Web Server(S)
+		App Server(S)
+		DB server(S)
+	Prod
+		Web Server(S) - 30
+		App Server(S) - 50
+		DB server(S) - 20
+=========================================
+
+	WEB 	25 APACHE 25 Ng 25 IIS 25 W
+	APP 	25 TOMCAT 25 JBOSS 25 WL 25 WS
+	DB	25 mysql 25 oracle 25 mssql 25 ps
+	10s....
+
+1 Dep ---> 9 mins
+100 Dep ---> 9 mins
+--------------------------
+		Parallel deployment capability?
+
+
+Which tool can have Parallel deployment capability?
+=============================================================
+Programming - Ansible -> Puppet -> Chef -> Salt
+Gui - Octopus Deploy, UDeploy
+
+Where can you use ansible?
+		Parallel change mgmt in servers.
+	
+https://www.devopsschool.com/path/
+=========================================================================
+1 Dep ---> 1 sec
+1000 Dep ---> 1 sec
+--------------------------
+Docker -> Kubernetes
+https://www.devopsschool.com/videos/show/docker?type=video
+
+
+What role your org is expecting from you....
+--------------------------------
+Programmer
+		Coding for Prod
+		Coding for testing a prod
+		Coding for infra - Ansible - terraform - Docker - Kubernetes
+
+
+Testing
+	
+	
+
+
+What is Ansible?
+==========================================
+- Config mgmt tool.
+- For Consitent change mgmt in servers
+- Written in Python
+- From redhat
+- Release
+	Community - CMD - Open source - Free
+	Enterprise - CMD -> GUI - Paid - Tower
+- Agent less
+
+What is Config mgmt?
+=========================================
+	SERVER(S) Config mgmt
+
+What is there in SERVER? of managing config?
+=========================================
+
+Resources
+
+file			config of this res using Ansible for multiple server.
+services		config
+package			config
+user			config
+group			config
+shell			config
+bash			config
+ps			config
+yum			config				
+apt
+
+============================================
+Why Ansible?
+==================
+	Easy to learn - test - debug - extend - share
+		compare to java,c++,perl python 
+	Platform indep
+	
+	IDEOMPOTENT
+	10 Steps - 1 Step take 1 min - 10 mins
+	========================================
+	1 deploy ------10 changes----------------10 mins
+	2 deploy -----2 changes -------2 mins
+
+
+
+
+How Ansible Works?
+===================================================================
+ACS - Ansible Control Server
+ARS - Ansible Remote Server
+
+
+ACS				ARS
+============================================
+Linux				Windows 
+				Linux
+64BIT				32 - 64 bit
+
+-------------------SSH---------> LINUX
+-------------------WINRM---------> Windows
+Python2.7			Linux(Python 2.7+)
+				Windows (PS 3.0 + DOT NET 4.0)
+
+Other tools - 
+========================================
+Your Roles in Ansible
+========================================
+Dev  - Will write and test ansible code.
+Ops - Will  Manage server(s), env, access and Apply "ansible code" into server(s).
+=====================================
+How to become Ansible programmers?
+============================================================================================
+How to become Java programmers?
+
+JDK -> .java 		-> .Class (.Class(s) ---> Jar --> (.jar(s) --> War file
+
+	Data Types
+	Operators
+	Conditioing
+	Looping
+	Methods aka Funtions
+	Class
+	Interface
+
+
+Ansible -> Play(.yaml) --> Playbook(.yaml) --> Role
+	Data Types
+	Operators
+	Conditioing
+	Looping
+	Methods aka Funtions
+
+How to setup and install Ansible?
+==================================================
+13.232.132.196
+ec2-user
+
+https://www.devopsschool.com/blog/how-to-install-ansible-in-centos-7-rhel-7/
+https://www.devopsschool.com/blog/how-to-login-linux-server-of-aws-from-windows-using-putty/
+
+
+    1  clear
+    2  ls
+    3  wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    4  sudo yum install wget -y
+    5  wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    6  yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    7  sudo rpm -i epel-release-latest-7.noarch.rpm
+    8  sudo rpm -i epel-release-latest-7.noarch.rpm
+    9  sudo yum install ansible -y
+   10  clear
+   11  ansible --version
+   12  ansible -help
+   13  clear
+   14  history
+
+====================================================
+Evolution of Lang
+============================
+Compiled ---> Interpreted ->  Declarative
+				xml -> yaml -> json
+===========================================================
+
+Components of Ansible in ACS
+=================================================
+- Ansible
+	ansible - /bin/ansible
+	Modules - 
+	Config - /etc/ansible/ansible.cfg
+
+- Code aka Playbook
+
+
+- Server details aka inventory aka hosts
+============================================================
+What is Module????
+	is doing one TASK
+			Accept parameters
+
+Create a dir?
+========================= AKA Module
+mkdir path/dirname
+
+https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
+
+
+What is Playbook?
+represent in YAMl
+===========================
+PLAY1
+	Host(S) - This is group name of servers where it need to be executed
+	TASK(S)
+		Task1 - ONE Module name with Param
+		Task2 - ONE Module name with Param
+		Task3 - ONE Module name with Param
+		Task4 - ONE Module name with Param
+PLAY2	
+	Host(S) - This is group name of servers where it need to be executed
+	TASK(S)
+		Task1 - ONE Module name with Param
+		Task2 - ONE Module name with Param
+		Task3 - ONE Module name with Param
+		Task4 - ONE Module name with Param
+
+PLAY3
+	Host(S) - This is group name of servers where it need to be executed
+	TASK(S)
+		Task1 - ONE Module name with Param
+		Task2 - ONE Module name with Param
+		Task3 - ONE Module name with Param
+		Task4 - ONE Module name with Param
+
+
+
+cookbook
+	recipe
+		ingred
+		How ???
+
+
+What is aka inventory aka hosts?????
+================================================
+inventory is nothing but [ list of IP addresss ]
+	Can be passed on commmand line
+	can be passed into file
+	can be passed into script
+
+
+
+==========================================================================
+How to get started with it?
+
+
+DO one thing --> Linux -> 
+		commmand
+		shell scripting
+
+	using ADHOC command 
+		Do one task in ONE MACHINE(localhost)
+		Do one task in ONE REMOTE MACHINE
+		Do one task in MULTIPLE REMOTE MACHINES using Inventory
+		Do one task in MULTIPLE REMOTE MACHINES using group in Inventory
+	using Playbook(Program)
+		Do Multiple tasks(Playbook) in ONE MACHINE(localhost)
+		Do Multiple tasks(Playbook) in ONE REMOTE MACHINE
+		Do Multiple tasks(Playbook) in MULTIPLE REMOTE MACHINE using Inventory
+		Do Multiple tasks(Playbook) in MULTIPLE REMOTE MACHINE using group in Inventory
+		Do Multiple tasks(Playbook) in MULTIPLE REMOTE MACHINE using group of group in Inventory
+		Do Multiple tasks(Playbook) in MULTIPLE REMOTE MACHINE using environment directory Inventory 
+		
+	using Role(Program)
+		Do One Role in in ONE MACHINE(localhost)
+		Do Multiple Roles in ONE REMOTE MACHINE
+		Do Multiple Roles in MULTIPLE REMOTE MACHINE using Inventory
+		Do Multiple Roles in MULTIPLE REMOTE MACHINE using group in Inventory
+		Do Multiple Roles in MULTIPLE REMOTE MACHINE using group of group in Inventory
+		Do Multiple Roles in MULTIPLE REMOTE MACHINE using environment directory Inventory
+
+===============================================================================
+How to create adhoc commands?
+- "ansible"
+====================================================
+What is your requirement of deplolyment? projects? use? deploy?
+==================================================================
+Setup a webserver in 100 machine?
+psu code
+-----------------------
+Step 1 - Install httpd				Module Name - yum  Param - state=present  name=httpd
+Step 2 - Copy index.html to /var/www/html	Module Name - copy   Param - dest=/var/www/html src=index.html
+Step 3 - start a service			Module Name - service  Param - name=httpd state=started
+Step 4 - create a dir /tmp/ansible		Module Name - file  Param - path=/tmp/ansible state=directory
+Step 5 - create a file into /tmp/ansible/devopsschool.txt	Module Name - file  Param - path=/tmp/ansible/devopsschool.txt state=touch
+
+---------"ansible module for"------------------------------------
+- Flow in which you would run???
+- Dependent steps
+
+ansible localhost -m yum -a"state=present  name=httpd"
+ 39  ansible localhost -m yum -a"state=present  name=httpd"
+   40  clear
+   41  ansible localhost -m yum -a"state=present  name=httpd"
+   42  clear
+   43  ansible localhost -m yum -a"state=present  name=httpd" -vvvvv
+
+ansible localhost -m copy -a"dest=/var/www/html src=index.html"
+ansible localhost -m service -a"name=httpd state=started"
+ansible localhost -m file -a"path=/tmp/ansible state=directory"
+ansible localhost -m file -a"path=/tmp/ansible/devopsschoo.txt state=touch"
+
+
+Setup a appserver in 100 machine?
+
+
+Setup a dbserver in 100 machine?
+===================================================================================
+
+Lab and Assignment 1 - 
+https://www.devopsschool.com/blog/ansible-adhoc-commands-lab-excercise-part-1/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
