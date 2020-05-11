@@ -380,8 +380,26 @@ https://www.devopsschool.com/blog/ansible-adhoc-commands-lab-excercise-part-1/
 
 
 
+Ravi		13.233.148.41
+Subash		13.127.45.97
+Prayerna Bhat	13.233.198.58
+Azhar Md Ali	13.127.175.68
+Radha Thirunavukkarasu	13.233.90.77
+Manickam Kamalakkannan	13.235.19.18
+Priya Kesavan		52.66.16.112
+Kathambari		52.66.209.89	
+Muthukumaran Loganathan	52.66.178.35
+Pramoda Kumar Jena	13.233.244.151
+Rajakumar Dharmalingam	13.235.134.255
+Sathyaprakash		13.235.100.91
+Sankar S		13.233.53.214
+Nirmala Dhashnamurthy	3.6.38.127
+Hinduja sivaji		52.66.204.15
+Priyanka Ashokan	13.233.164.202	
 
-
+ec2-user
+Key - https://www.devopsschool.com/notes/docker/2019/
+file name - rajesh-mumbai.ppk
 
 
 
